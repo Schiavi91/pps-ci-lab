@@ -4,3 +4,25 @@ javadoc {
     source = sourceSets.main.allJava
     classpath = configurations.compile
 }
+
+task jar1(type: Jar) {
+	from sourceSets.main.output
+	baseName = "jar1"
+	manifest {
+		attributes 'Main-Class': "HelloWorld"
+	}
+}
+task jar2(type: Jar) {
+	from sourceSets.main.output
+	baseName = "jar2"
+	manifest {
+		attributes 'Main-Class': "HelloWorld66"
+	}
+}
+task jar3(type: Jar) {
+	from sourceSets.main.output
+	baseName = "jar3"
+	manifest {
+		attributes 'Main-Class': "HelloMain"
+	}
+}
